@@ -1,5 +1,4 @@
 # HTML5-PHP-Template
-==================
 
 A template for a quick, simple website.
 
