@@ -1,0 +1,180 @@
+/*
+ * Library of CSS classes to help with layout.
+ *
+ * Cross compatible with IE8 and up, and the latest Chrome, Firefox, and Safari.
+ */
+
+/* Necessary initializations so make sure these do not get overridden!*/
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+/* Text layout */
+.align-text-center {
+	text-align: center;
+}
+
+.align-text-right {
+	text-align: right;
+}
+
+.align-text-justify {
+	text-align: justify;
+}
+
+.fill-screen-width {
+	position: relative;
+	overflow: auto;
+	width: 100%;
+}
+
+/* You should give this a min-height in your custom stylesheet */
+.fill-screen-width.and-height {
+	height: 100%;
+}
+
+.fit-inside {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+/*
+ * This technique, which should work on all common browsers (including IE8) is from
+ * Stack Overflow by user Billbad:
+ * http://stackoverflow.com/questions/396145/whats-the-best-way-of-centering-a-div-vertically-with-css
+ *
+ * Note that I have replaced "position: absolute" on outer with "position: static" as it causes problems
+ * when inside an element with padding. I have not noticed any ill effects but please let me know if you do!
+ */
+.align-middle-outer {
+	display: table;
+	position: static;
+	height: 100%;
+	width: 100%;
+}
+.align-middle-inner {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.align-top {
+	position: absolute;
+	top: 0;
+}
+
+.align-bottom {
+	position: absolute;
+	bottom: 0;
+}
+
+/* Fixes a problem to do with absolute positioning inside an element with padding */
+.align-top,
+.align-bottom {
+	left: 0;
+}
+
+.align-center {
+	display: block;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.align-left {
+	float: left;
+}
+
+.align-right {
+	float: right;
+}
+
+/*
+ * Adapted from the Responsive Grid System by Graham Miller:
+ * http://www.responsivegridsystem.com/
+ */
+.columns {
+	clear: both;
+	zoom: 1;
+}
+
+.columns:before,
+.columns:after {
+	content:"";
+	display:table;
+}
+
+.columns:after {
+	clear:both;
+}
+
+.column {
+	display: block;
+	float: left;
+	padding-left: 1%;
+	padding-right: 1%;
+}
+
+.column:first-child {
+	margin-left: 0;
+}
+
+.column.one-quarter {
+	width: 25%;
+}
+
+.column.one-third {
+	width: 33.3%;
+}
+
+.column.half {
+	width: 50%;
+}
+
+.column.two-thirds {
+	width: 66.6%;
+}
+
+.column.three-quarters {
+	width: 75%;
+}
+
+.column.on-the-right {
+	float: right;
+}
+
+/* No columns for displays with a low width */
+@media screen and (max-width: 600px) {
+
+	.column {
+		padding-left: 0;
+		padding-right: 0;
+		padding-bottom: 20px;
+	}
+
+	.column.one-quarter {
+		width: 100%;
+	}
+
+	.column.one-third {
+			width: 100%;
+	}
+
+	.column.half {
+			width: 100%;
+	}
+
+	.column.two-thirds {
+		width: 100%;
+	}
+
+	.column.three-quarters {
+		width: 100%;
+	}
+
+}

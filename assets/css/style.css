@@ -1,0 +1,219 @@
+/*
+ * Main stylesheet
+ */
+
+body {
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-size: 125%;
+	color: rgb(30, 30, 30);
+}
+
+h1 {
+	font-weight: 800;
+	font-size: 300%;
+}
+
+h2 {
+	font-weight: 300;
+	font-size: 150%;
+}
+
+p {
+	font-weight: 400;
+	font-size: 100%;
+}
+
+pre {
+	white-space: pre-wrap;
+	background-color: rgb(255, 255, 255);
+	font-size: 90%;
+	padding: 8px;
+}
+
+em {
+	font-weight: 800;
+}
+
+header,
+footer,
+section {
+	min-width: 320px;
+}
+
+header {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+header nav,
+footer {
+	background-color: rgb(30, 30, 30);
+}
+
+header nav ul li {
+	display: inline-block;
+	padding: 10px 2%;
+}
+
+header nav ul li a,
+footer a {
+	font-weight: 300;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: rgb(170, 170, 170);
+}
+
+header nav ul li a {
+	font-size: 80%;
+	padding: 6px;
+}
+
+header nav ul li a:hover,
+footer a:hover {
+	color: rgb(255, 255, 255);
+}
+
+footer {
+	font-size: 80%;
+	margin-top: 10px;
+}
+
+footer .content {
+	padding: 10px;
+}
+
+footer p {
+	float: right;
+	color: rgb(225, 225, 225);
+}
+
+article {
+/*
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 5%;
+	padding-bottom: 5%;
+*/
+	margin: 10px !important;
+	padding: 20px;
+}
+
+article ol li,
+article ul li {
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+article h1,
+article pre {
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+article h2,
+article p,
+article ol,
+article ul {
+	margin-top: 3%;
+	margin-bottom: 3%;
+}
+
+article ol,
+article ul {
+	list-style-position: outside;
+}
+
+article ol {
+	margin-left: 31px;
+}
+
+article ul {
+	list-style-type: disc;
+	margin-left: 22px;
+}
+
+.background {
+	background-color: rgb(255, 255, 255);
+}
+
+.fill-screen-width.and-height {
+	min-height: 500px;
+}
+
+.max-content-width {
+	max-width: 960px;
+}
+
+.top,
+.features {
+	border: 1px solid rgb(100, 100, 100);
+	background-color: rgb(255, 255, 255);
+}
+
+.get-started,
+.more-info {
+	background-color: rgb(225, 225, 225);
+}
+
+.layout-examples {
+	padding-bottom: 5%;
+}
+
+.centering-example,
+.columns-example {
+	font-size: 90%;
+}
+
+.columns-example,
+.columns-example .columns,
+.columns-example .column {
+	height: 100%;
+}
+
+.columns-example .columns {
+	padding: 4% 3%;
+}
+
+.columns-example .column {
+	padding-left: 1%;
+	padding-right: 1%;
+}
+
+/* Same max width as in layout.css */
+@media screen and (max-width: 600px) {
+
+	body {
+		font-size: 75%;
+	}
+
+	header nav {
+		margin-top: 10px;
+		background-color: transparent;
+	}
+
+	header nav ul li {
+		display: block;
+		padding: 3px 10px;
+	}
+
+	header nav ul li a {
+		display: block;
+		background-color: rgb(30, 30, 30);
+	}
+
+	header nav ul li a:hover {
+		background-color: rgb(100, 100, 100);
+	}
+
+	.columns-example .columns {
+		padding: 20px 20px 0 20px;
+	}
+
+	.columns-example .column {
+		height: 33.3%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+}
